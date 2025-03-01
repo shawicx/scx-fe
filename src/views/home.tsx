@@ -1,3 +1,10 @@
+/*
+ * @Author: shawicx d35f3153@proton.me
+ * @Date: 2025-02-13 21:49:40
+ * @LastEditors: shawicx d35f3153@proton.me
+ * @LastEditTime: 2025-03-01 15:34:46
+ * @Description: 
+ */
 import './home.scss'
 
 export default function Home() {

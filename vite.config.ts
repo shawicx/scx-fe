@@ -11,7 +11,7 @@ const resolve = (dir: string) => path.resolve(__dirname, dir);
 
 // 模版字符串
 const AliasConfig = AliasDirs.reduce((acc: Acc, dir) => {
-  acc[`@/${dir}`] = resolve(`src/${dir}`);
+  acc[`～/${dir}`] = resolve(`src/${dir}`);
   return acc;
 }, {});
 
