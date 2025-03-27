@@ -1,0 +1,36 @@
+@keyframes cardEnter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-card {
+  animation: cardEnter 0.5s ease-out forwards;
+  animation-delay: calc(var(--index) * 0.1s);
+  opacity: 0;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .project-card {
+    margin-bottom: 1.5rem;
+  }
+
+  .tech-stack {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .contributions {
+    padding-left: 1rem;
+  }
+}
