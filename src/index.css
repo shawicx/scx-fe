@@ -1,14 +1,1 @@
 @import "tailwindcss";
-@tailwind utilities;
-
-:root {
-  @apply bg-white text-gray-900;
-}
-
-.dark {
-  @apply bg-gray-900 text-gray-100;
-}
-
-body {
-  @apply min-h-screen transition-colors duration-200;
-}

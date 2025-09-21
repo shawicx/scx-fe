@@ -1,0 +1,109 @@
+.skill-card {
+  @apply relative flex items-center gap-3 px-4 py-3 backdrop-blur-sm bg-white/60 rounded-full border border-white/20;
+  @apply transition-all duration-300 ease-out;
+  @apply select-none;
+
+  &--clickable {
+    @apply cursor-pointer;
+
+    &:hover {
+      @apply shadow-lg;
+    }
+
+    &:active {
+      @apply scale-95;
+    }
+  }
+
+  &__icon {
+    @apply text-xl flex-shrink-0;
+    @apply transition-transform duration-300;
+
+    .skill-card:hover & {
+      @apply scale-110;
+    }
+  }
+
+  &__content {
+    @apply flex flex-col gap-1;
+  }
+
+  &__name {
+    @apply text-gray-800 font-medium text-sm;
+    @apply transition-colors duration-300;
+  }
+
+  &__level {
+    @apply flex gap-1;
+  }
+
+  &__star {
+    @apply text-xs text-gray-300;
+    @apply transition-colors duration-300;
+
+    &--filled {
+      @apply text-yellow-400;
+    }
+  }
+
+  &__category {
+    @apply text-xs text-gray-500 capitalize;
+  }
+
+  &__glow {
+    @apply absolute inset-0 rounded-full opacity-0;
+    @apply transition-opacity duration-300;
+    @apply pointer-events-none;
+
+    .skill-card:hover & {
+      @apply opacity-100;
+    }
+  }
+
+  // 响应式调整
+  @media (max-width: 640px) {
+    @apply px-3 py-2 gap-2;
+
+    &__icon {
+      @apply text-lg;
+    }
+
+    &__name {
+      @apply text-xs;
+    }
+
+    &__star {
+      @apply text-xs;
+    }
+  }
+
+  // 动画效果
+  &:hover {
+    @apply shadow-md;
+    
+    .skill-card__name {
+      color: var(--skill-color);
+    }
+  }
+
+  // 按分类着色
+  &[data-category="frontend"] {
+    @apply border-blue-200/50;
+  }
+
+  &[data-category="backend"] {
+    @apply border-green-200/50;
+  }
+
+  &[data-category="tool"] {
+    @apply border-purple-200/50;
+  }
+
+  &[data-category="language"] {
+    @apply border-orange-200/50;
+  }
+
+  &[data-category="css"] {
+    @apply border-pink-200/50;
+  }
+}

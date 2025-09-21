@@ -1,0 +1,18 @@
+.loading-spinner {
+  @apply flex flex-col items-center justify-center gap-3;
+
+  &__circle {
+    @apply border-4 border-gray-200 border-t-current rounded-full;
+    animation: spin 1s linear infinite;
+  }
+
+  &__text {
+    @apply text-sm font-medium;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
